@@ -4,6 +4,3 @@ __pycache__/
 .DS_Store
 .ipynb_checkpoints/
 data/gdelt_timeline.csv
-results/*.csv
-results/*.txt
-figures/*.png
