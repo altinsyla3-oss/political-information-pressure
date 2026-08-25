@@ -12,7 +12,7 @@ Research on misinformation often focuses on the accuracy or persuasive effect of
 
 The project operationalizes **political event pressure** as the relative concentration of conflict-coded events within the broader global event environment.
 
-It does not treatt news volume as direct evidence of cognitive overload. Instead, it constructs a reproducible environmental indicator that could later be paired with individual-level experimental or survey outcomes.
+It does not treat news volume as direct evidence of cognitive overload. Instead, it constructs a reproducible environmental indicator that could later be paired with individual-level experimental or survey outcomes.
 
 A possible theoretical pathway is:
 
@@ -32,8 +32,8 @@ This produces a normalized indicator of **political event pressure** rather than
 
 The workflow demonstrates:
 
-- REST API retrieval
-- JSON parsing
+- automated retrieval of daily GDELT event files
+- tabular event-data parsing and cleaning
 - pandas data cleaning
 - normalized time-series construction
 - rolling means and standard deviations
@@ -50,9 +50,9 @@ The workflow demonstrates:
 The main information-pressure measure is:
 
 ```text
-matched articles about the topic
---------------------------------
-all articles monitored by GDELT
+conflict-coded events
+---------------------
+all GDELT events
 ```
 
 This avoids interpreting raw publication volume alone as heightened attention.
@@ -84,11 +84,11 @@ The ADF result rejects a unit-root null at the 5% level, providing support for s
 
 The highest-pressure periods included several major geopolitical episodes. Actor-country decomposition of the leading spike showed the largest identifiable shares associated with:
 
-- USA: **22.8%**
-- Israel: **12.9%**
-- Palestine: **7.8%**
-- Iran: **4.6%**
-- Russia: **4.5%**
+USA: 29.6%
+Israel: 6.5%
+Iran: 4.9%
+Palestine: 4.6%
+Iraq: 4.1%
 
 These results suggest that political event pressure exhibits meaningful short-term persistence and that unusually high-pressure periods can be detected computationally.
 
