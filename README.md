@@ -186,7 +186,7 @@ The script produces:
 
 This project is exploratory and observational.
 
-It does not establish that information pressure causes cognitive overload or political effects. News volume is only one dimension of the broader information environment, and keyword-based retrieval can contain both false positives and false negatives.
+It does not establish that information pressure causes cognitive overload or political effects. GDELT event coding reflects both underlying events and reporting dynamics, and the use of negative Goldstein scores is a broad operational proxy for conflict-oriented political activity.
 
 A stronger follow-up design could combine environmental information-pressure measures with individual-level outcomes such as:
 
