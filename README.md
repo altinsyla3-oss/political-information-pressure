@@ -45,7 +45,7 @@ The workflow demonstrates:
 
 ## Main measure
 
-### Coverage share
+### Conflict-event share
 
 The main information-pressure measure is:
 
@@ -54,8 +54,9 @@ conflict-coded events
 ---------------------
 all GDELT events
 ```
+Conflict-coded events are defined as events with a negative GDELT Goldstein Scale value (GoldsteinScale < 0).
 
-This avoids interpreting raw publication volume alone as heightened attention.
+This normalization avoids interpreting raw event volume alone as heightened political event pressure.
 
 ## Spike detection
 
