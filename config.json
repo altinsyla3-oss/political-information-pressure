@@ -1,7 +1,0 @@
-{
-  "query": "(disinformation OR misinformation)",
-  "timespan": "1year",
-  "rolling_window": 14,
-  "spike_threshold_z": 2.0,
-  "api_base": "https://api.gdeltproject.org/api/v2/doc/doc"
-}
