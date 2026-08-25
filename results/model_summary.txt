@@ -8,8 +8,8 @@ LAG-1 OLS MODEL
 Dep. Variable:         conflict_share   R-squared:                       0.485
 Model:                            OLS   Adj. R-squared:                  0.482
 Method:                 Least Squares   F-statistic:                     47.59
-Date:                Mon, 24 Aug 2026   Prob (F-statistic):           8.97e-11
-Time:                        17:43:46   Log-Likelihood:                 575.08
+Date:                Wed, 26 Aug 2026   Prob (F-statistic):           8.97e-11
+Time:                        01:21:28   Log-Likelihood:                 575.08
 No. Observations:                 179   AIC:                            -1146.
 Df Residuals:                     177   BIC:                            -1140.
 Df Model:                           1                                         

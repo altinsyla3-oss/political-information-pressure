@@ -1,18 +1,18 @@
 # Political Information Pressure
 
-A reproducible computational social-science project examining temporal spikes and persistence in news coverage related to digital influence, misinformation, and information manipulation.
+A reproducible computational social-science project examining temporal spikes and persistence in global conflict-event activity using GDELT event data.
 
 ## Research question
 
-**When coverage of digital influence and information manipulation increases sharply, how abnormal and persistent are those information-volume spikes relative to the recent information environment?**
+**Do periods of unusually elevated global conflict-event activity exhibit detectable anomalies and short-term temporal persistence?**
 
 ## Motivation
 
 Research on misinformation often focuses on the accuracy or persuasive effect of individual messages. This project explores a complementary dimension: whether the **volume, velocity, and temporal concentration of information** can be measured as an environmental condition relevant to political communication and information overload.
 
-The project operationalizes one macro-level component of information overload as **information pressure**.
+The project operationalizes **political event pressure** as the relative concentration of conflict-coded events within the broader global event environment.
 
-It does not treat news volume as direct evidence of cognitive overload. Instead, it constructs a reproducible environmental indicator that could later be paired with individual-level experimental or survey outcomes.
+It does not treatt news volume as direct evidence of cognitive overload. Instead, it constructs a reproducible environmental indicator that could later be paired with individual-level experimental or survey outcomes.
 
 A possible theoretical pathway is:
 
@@ -20,15 +20,13 @@ A possible theoretical pathway is:
 
 ## Data
 
-The analysis uses the **GDELT DOC 2.0 API** to retrieve time-series data for coverage involving:
+The analysis uses the **GDELT Event Database**, drawing on daily event files covering 180 consecutive days from January to June 2024.
 
-- disinformation
-- misinformation
-- influence operations
-- fake accounts
-- bot networks
+Each daily file contains structured event records with variables describing actors, locations, event types, and the **Goldstein Scale**, which measures the cooperative or conflictual character of an event.
 
-The analysis uses both matched article volume and total monitored article volume so that topic attention can be normalized.
+For this project, events with a negative Goldstein score are treated as conflict-coded events. The main daily measure is the share of all recorded events that are conflict-coded.
+
+This produces a normalized indicator of **political event pressure** rather than a raw event count.
 
 ## Methods
 
@@ -172,13 +170,16 @@ On Windows without PowerShell script activation:
 
 The script produces:
 
-- `data/gdelt_timeline.csv`
-- `results/processed_information_pressure.csv`
+- `data/gdelt_event_pressure.csv`
+- `results/processed_event_pressure.csv`
 - `results/spike_days.csv`
 - `results/model_summary.txt`
-- `figures/information_pressure_timeseries.png`
+- `results/spike_contributors_<date>.csv`
+- `figures/event_pressure_timeseries.png`
 - `figures/rolling_zscore.png`
 - `figures/lag_persistence.png`
+- `figures/political_event_pressure_180d_annotated.png`
+- `figures/spike_contributors_<date>.png`
 
 ## Limitations
 

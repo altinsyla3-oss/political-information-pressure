@@ -19,7 +19,7 @@ for folder in (DATA_DIR, RESULTS_DIR, FIGURES_DIR):
     folder.mkdir(exist_ok=True)
 
 
-# Fixed 30-day window for reproducibility
+# Fixed 180-day window for reproducibility
 DATES = pd.date_range("2024-01-01", periods=180, freq="D")
 
 
@@ -440,10 +440,16 @@ def main():
         model,
         adf_result,
     )
+
     make_polished_spike_figure(df, spikes)
+
     if len(spikes) > 0:
+        top_spike = spikes.loc[
+            spikes["rolling_z"].idxmax()
+        ]
+
         top_spike_date = pd.to_datetime(
-            spikes.iloc[0]["date"]
+            top_spike["date"]
         ).strftime("%Y-%m-%d")
 
         contributors = analyze_spike_contributors(
